@@ -1,0 +1,25 @@
+{
+  "name": "easy-loading-interceptors",
+  "version": "0.0.0",
+  "authors": [
+    "Jaziel Lopez <juan.jaziel@gmail.com>"
+  ],
+  "description": "How to use AngularJS Interceptors",
+  "main": "index.html",
+  "keywords": [
+    "Angular",
+    "Interceptors",
+    "Loading",
+    "Indicators",
+    "Premises",
+    "$http"
+  ],
+  "license": "MIT",
+  "homepage": "jlopez.mx",
+  "dependencies": {
+    "angular-bootstrap": "~0.13.4",
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.6",
+    "requirejs-plugins": "~1.0.3"
+  }
+}
