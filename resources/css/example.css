@@ -3,3 +3,21 @@ img.angular-icon{
     top:-15px;
     width:50%;
 }
+
+
+.footer{
+    position: relative;
+    margin: 10px;
+}
+
+.footer h2, .footer h4{
+    color: #fff;
+}
+
+.footer p,  .footer span{
+    color:#999;
+}
+
+body > .container{
+    padding-bottom:60px;
+}

@@ -6,6 +6,7 @@
     <title>AngularJS - Easy Loading Interceptors</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="resources/css/example.css">
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
@@ -28,32 +29,43 @@
     </div>
 </nav>
 <hr/>
-<div class="container theme-showcase" role="main">
-    <div class="page-header">
-        <h1>AngularJS Interceptors</h1>
-        <div class="help-block">
-            <div>Practical example of how to intercept an http call and implement a pre-checking routine.</div>
+<div class="container">
+    <div class="container-fluid theme-showcase" role="main">
+        <div class="page-header">
+            <h1>AngularJS Interceptors</h1>
+            <div class="help-block">
+                <div>Practical example of how to intercept an http call and implement a pre-checking routine.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" ng-app="intercept" ng-controller="interceptCtrl">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Test Interceptors</div>
+                    <div class="panel-body">
+                        <input class="form-control" placeholder="Say something nice in 10 characters...." autocomplete="off" ng-model="subject" maxlength="10">
+                    </div>
+                    <div class="panel-footer text-center">
+                        <input type="button" class="btn btn-primary" value="Send Text" ng-click="submit();">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <alert ng-repeat="row in log.slice().reverse() track by $index" type="{{row.type}}">{{row.message}}</alert>
         </div>
     </div>
 </div>
 
-<div class="container" ng-app="intercept" ng-controller="interceptCtrl">
-    <div class="container-fluid">
-        <div class="container-fluid">
-            <div class="panel panel-primary">
-                <div class="panel-heading">Test Interceptors</div>
-                <div class="panel-body">
-                    <input class="form-control" placeholder="Say something nice in 10 characters...." autocomplete="off" ng-model="subject" maxlength="10">
-                </div>
-                <div class="panel-footer text-center">
-                    <input type="button" class="btn btn-primary" value="Send Text" ng-click="submit();">
-                </div>
-            </div>
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid footer">
+        <div class=" text-center">
+            <span>Jaziel Lopez, Web Development, Tijuana Area, Mexico, 2015 | </span>
+            <span class="icon fa fa-envelope">&nbsp;</span><a href="mailto:juan.jaziel@gmail.com" title="Drop me an email">juan.jaziel@gmail.com</a>
         </div>
     </div>
-    <div class="container-fluid">
-        <alert ng-repeat="row in log.slice().reverse() track by $index" type="{{row.type}}">{{row.message}}</alert>
-    </div>
-</div>
+</nav>
 </body>
 </html>
